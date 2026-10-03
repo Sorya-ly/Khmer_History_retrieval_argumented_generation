@@ -9,7 +9,7 @@ This stage turns raw Khmer Wikipedia articles into clean, sentence-aware text ch
 
 | Part | Task | Due |
 |------|------|-----|
-| **1 (this)** | Preprocessing + splitting | Oct 3, 2026 |
+| **1 LY Soryapheak** | Preprocessing + splitting | Oct 3, 2026 |
 | 2 | Embedding + fine-tuning + storing | Oct 24, 2026 |
 | 3 | Evaluation + retriever + LLM | Oct 30, 2026 |
 
