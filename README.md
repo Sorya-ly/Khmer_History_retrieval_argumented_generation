@@ -1,5 +1,5 @@
 # Khmer History RAG: Part 1, 
-**Course:** ITM454 | 
+**Course:** ITM454 | Natural Language Processing
 ## Preprocessing and Splitting
 
 **Owner:** LY Soryapheak | **Due:** October 3, 2026
