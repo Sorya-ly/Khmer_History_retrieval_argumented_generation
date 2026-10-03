@@ -1,4 +1,4 @@
-# Khmer History RAG: Part 1, 
+# Khmer History RAG:  
 **Course:** ITM454 | Natural Language Processing
 ## Preprocessing and Splitting
 
