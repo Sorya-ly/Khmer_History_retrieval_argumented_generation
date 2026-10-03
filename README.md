@@ -1,7 +1,9 @@
-# Khmer History RAG: Part 1, Preprocessing and Splitting
+# Khmer History RAG: Part 1, 
+**Course:** ITM454 | 
+## Preprocessing and Splitting
 
-**Course:** ITM454 | **Owner:** [Your name] | **Due:** October 3, 2026
-**Files:** `Khmer-His_RAG.ipynb` (pipeline), `khmer_history_chunks.json` (output)
+**Owner:** LY Soryapheak | **Due:** October 3, 2026
+**Files:** `Preprocessing_splitting.ipynb` (pipeline), `khmer_history_chunks.json` (output)
 
 ## 1. Purpose
 
