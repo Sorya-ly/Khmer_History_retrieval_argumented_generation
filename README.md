@@ -1,4 +1,4 @@
-# Khmer History RA
+# Khmer History RAG
 
 **Course:** ITM454 | **Due:** October 30, 2026
 
