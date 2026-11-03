@@ -1,1 +1,12 @@
 .DS_Store
+
+# secrets - never commit the Gemini API key
+.env
+
+Khmer_History_RAG_Pipeline.pdf
+Khmer_History_RAG_Guide.pdf
+.venv
+build_rag_guide_pdf.py
+build_conversation_pdf.py
+Khmer_History_RAG_Documentation.pdf
+.history

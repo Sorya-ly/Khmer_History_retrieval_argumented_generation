@@ -1,0 +1,40 @@
+# ======================================================================
+# Requirements for evaluate_retriever.ipynb (GPU evaluation)
+# Python 3.10, Windows, NVIDIA RTX 4070 Laptop GPU (CUDA 12.x driver)
+#
+# INSTALL ORDER MATTERS. Run these TWO commands, in this order:
+#
+#   1) CUDA-enabled PyTorch (NOT the default CPU wheel on PyPI):
+#        pip install torch --index-url https://download.pytorch.org/whl/cu121
+#
+#   2) Everything else in this file:
+#        pip install -r requirements.txt
+#
+# The cu121 wheel runs on your CUDA 12.8 driver (backward compatible).
+# If you skip step 1 and let step 2 pull torch from PyPI you will get the
+# CPU-only build and the notebook will fall back to CPU (slow).
+# ======================================================================
+
+# --- core numerics / data ---
+numpy>=1.26,<2.0
+pandas>=2.0
+matplotlib>=3.7
+
+# --- embeddings / model loading ---
+# torch is installed separately via the cu121 index (see note above).
+sentence-transformers>=3.0
+transformers>=4.40
+accelerate>=1.0
+safetensors>=0.4
+
+# --- lexical retrieval (BM25) + Khmer tokenizer ---
+rank-bm25>=0.2.2
+khmer-nltk>=1.6
+
+# --- chat UI + LLM generation (RAG answer step) ---
+gradio>=4.0
+google-genai>=0.3
+python-dotenv>=1.0
+
+# --- notebook runtime (already present in your .venv, pinned for safety) ---
+ipykernel>=6.0
