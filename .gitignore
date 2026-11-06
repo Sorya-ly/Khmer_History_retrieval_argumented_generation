@@ -10,3 +10,5 @@ build_rag_guide_pdf.py
 build_conversation_pdf.py
 Khmer_History_RAG_Documentation.pdf
 .history
+
+khmer-retriever-finetuned/model.safetensors
