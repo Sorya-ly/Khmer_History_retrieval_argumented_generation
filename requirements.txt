@@ -13,10 +13,16 @@
 # The cu121 wheel runs on your CUDA 12.8 driver (backward compatible).
 # If you skip step 1 and let step 2 pull torch from PyPI you will get the
 # CPU-only build and the notebook will fall back to CPU (slow).
+#
+# On a Mac (Apple Silicon) skip step 1: plain `pip install torch` already
+# includes MPS GPU support.
 # ======================================================================
 
 # --- core numerics / data ---
-numpy>=1.26,<2.0
+# numpy 1.x has no wheels for Python 3.13+; on those it builds from source and
+# breaks on import. numpy 2 works on every Python from 3.10 up.
+numpy>=1.26; python_version < "3.13"
+numpy>=2.1; python_version >= "3.13"
 pandas>=2.0
 matplotlib>=3.7
 
@@ -26,10 +32,19 @@ sentence-transformers>=3.0
 transformers>=4.40
 accelerate>=1.0
 safetensors>=0.4
+datasets>=2.19   # model.fit() in the fine-tune notebook needs it ("Dataset is not defined" otherwise)
 
 # --- lexical retrieval (BM25) + Khmer tokenizer ---
 rank-bm25>=0.2.2
 khmer-nltk>=1.6
+
+# --- scraping (Preprocessing_splitting.ipynb only) ---
+wikipedia-api>=0.6
+
+# --- reranking (cross-encoder, rag_chat.ipynb) ---
+# Reorders the top 50 candidates before they reach the LLM.
+# Recall@5 on the hard test set: 0.712 without, 0.898 with.
+FlagEmbedding>=1.2
 
 # --- chat UI + LLM generation (RAG answer step) ---
 gradio>=4.0
